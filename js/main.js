@@ -447,17 +447,6 @@ function initTimeline() {
   });
 }
 
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const subject = encodeURIComponent(`Contact portfolio — ${data.get('name')}`);
-    const body = encodeURIComponent(`${data.get('message')}\n\n— ${data.get('name')} (${data.get('email')})`);
-    window.location.href = `mailto:julien.plomion2006@gmail.com?subject=${subject}&body=${body}`;
-  });
-}
-
 /* ============================================================
    Hero entrance
    ============================================================ */
@@ -798,7 +787,6 @@ initCounters();
 initTimeline();
 initAiChat();
 initPipeline();
-initContactForm();
 initHeroScene();
 initPhoneScene();
 startEntrance();

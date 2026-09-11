@@ -242,7 +242,7 @@ section{ position: relative; padding: 150px var(--pad); max-width: var(--contain
   font-family: var(--font-mono); font-size:11.5px; color: var(--text-faint); text-align:center; white-space:nowrap;
 }
 
-.stats-row{ display:grid; grid-template-columns: repeat(4,1fr); gap:24px; padding-top:48px; border-top:1px solid var(--border); }
+.stats-row{ display:grid; grid-template-columns: repeat(3,1fr); gap:24px; padding-top:48px; border-top:1px solid var(--border); }
 .stat{ display:flex; flex-direction:column; }
 .stat-num, .stat-suffix{ font-family: var(--font-display); font-size: clamp(30px,4vw,44px); font-weight:700; display:inline-block; }
 .stat-suffix{ color: var(--cyan); }
@@ -460,6 +460,7 @@ section{ position: relative; padding: 150px var(--pad); max-width: var(--contain
 }
 .contact-sub{ color: var(--text-dim); margin-top:16px; font-size:15px; }
 .contact-grid{ display:grid; grid-template-columns: 1.3fr .7fr; gap:48px; margin-top:56px; }
+.contact-grid-solo{ grid-template-columns: 1fr; max-width:420px; margin-left:auto; margin-right:auto; }
 .contact-form{ display:flex; flex-direction:column; gap:20px; }
 .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 .contact-form label{ display:flex; flex-direction:column; gap:8px; font-size:13px; color: var(--text-dim); }
