@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julien Plomion — Développeur Full Stack</title>
+<meta name="description" content="Portfolio de Julien Plomion, développeur full stack — conception d'applications web modernes, performantes et sur-mesure.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◆</text></svg>">
+
+<link rel="stylesheet" href="css/style.css">
+<script>
+  document.documentElement.classList.add('js-entrance');
+  setTimeout(function () {
+    if (!document.documentElement.dataset.entered) {
+      document.documentElement.classList.remove('js-entrance');
+    }
+  }, 4000);
+</script>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<canvas id="heroCanvas"></canvas>
+
+<header class="nav" id="nav">
+  <a href="#home" class="nav-logo">JP<span>.</span></a>
+
+  <nav class="nav-pill" id="navPill">
+    <span class="nav-indicator" id="navIndicator"></span>
+    <a href="#home" class="nav-link active" data-section="home">Accueil</a>
+    <a href="#about" class="nav-link" data-section="about">À propos</a>
+    <a href="#ai" class="nav-link" data-section="ai">IA</a>
+    <a href="#skills" class="nav-link" data-section="skills">Compétences</a>
+    <a href="#projects" class="nav-link" data-section="projects">Projets</a>
+    <a href="#experience" class="nav-link" data-section="experience">Parcours</a>
+    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+  </nav>
+
+  <a href="#contact" class="nav-cta">
+    <span class="nav-cta-dot"></span>
+    <span>Discutons</span>
+  </a>
+
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mobile-link" data-section="home">Accueil</a>
+  <a href="#about" class="mobile-link" data-section="about">À propos</a>
+  <a href="#ai" class="mobile-link" data-section="ai">IA</a>
+  <a href="#skills" class="mobile-link" data-section="skills">Compétences</a>
+  <a href="#projects" class="mobile-link" data-section="projects">Projets</a>
+  <a href="#experience" class="mobile-link" data-section="experience">Parcours</a>
+  <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+</div>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="dot-pulse"></span> Disponible pour de nouveaux projets</p>
+      <h1 class="hero-title">
+        <span class="hero-line" data-split>Julien Plomion</span>
+        <span class="hero-line hero-line-accent" data-split>Développeur Full Stack</span>
+      </h1>
+      <p class="hero-sub">
+        Je conçois et développe des applications web modernes, robustes et sur-mesure —
+        du back-end à l'interface, jusqu'aux détails d'interaction qui font la différence.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary"><span>Voir mes projets</span></a>
+        <a href="#contact" class="btn btn-outline"><span>Me contacter</span></a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><strong>4+</strong><span>années d'expérience</span></div>
+        <div class="hero-meta-item"><strong>30+</strong><span>projets livrés</span></div>
+        <div class="hero-meta-item"><strong>15+</strong><span>technologies</span></div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-cue-line"><i></i></div>
+    </div>
+  </section>
+
+  <div class="marquee-band">
+    <div class="marquee" data-dir="left">
+      <div class="marquee-inner">
+        <span>React</span><i>◆</i><span>TypeScript</span><i>◆</i><span>Node.js</span><i>◆</i>
+        <span>PostgreSQL</span><i>◆</i><span>Next.js</span><i>◆</i><span>Docker</span><i>◆</i>
+        <span>GraphQL</span><i>◆</i><span>AWS</span><i>◆</i>
+      </div>
+    </div>
+    <div class="marquee marquee-alt" data-dir="right">
+      <div class="marquee-inner">
+        <span>Architecture</span><i>◆</i><span>API REST</span><i>◆</i><span>CI/CD</span><i>◆</i>
+        <span>Performance</span><i>◆</i><span>Accessibilité</span><i>◆</i><span>Motion design</span><i>◆</i>
+        <span>Tests</span><i>◆</i><span>Sécurité</span><i>◆</i>
+      </div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="section-head">
+      <span class="section-tag reveal-up">01 — À propos</span>
+      <h2 class="section-title" data-words>Concevoir des produits qui tiennent la route, à chaque couche de la pile.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="reveal-up">
+          Développeur full stack passionné par la création de produits numériques à la fois
+          <strong>performants, accessibles et soignés jusque dans le détail</strong>. J'interviens sur
+          toute la chaîne technique : architecture back-end, API, bases de données, interfaces
+          front-end réactives et expériences interactives.
+        </p>
+        <p class="reveal-up">
+          Mon approche : comprendre le besoin métier avant d'écrire la moindre ligne de code,
+          livrer un travail propre et maintenable, et ne jamais sacrifier l'expérience utilisateur
+          sur l'autel de la technique.
+        </p>
+        <div class="about-tags reveal-up">
+          <span>Architecture logicielle</span>
+          <span>API REST &amp; GraphQL</span>
+          <span>UI/UX &amp; Motion design</span>
+          <span>DevOps &amp; CI/CD</span>
+        </div>
+        <a href="#contact" class="link-arrow reveal-up">Travaillons ensemble →</a>
+      </div>
+
+      <div class="phone-stage" id="phoneStage">
+        <canvas id="phoneCanvas"></canvas>
+        <div class="phone-caption">Application mobile — dashboard temps réel</div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat reveal-up"><span class="stat-num" data-count="4">0</span><span class="stat-suffix">+</span><span class="stat-label">Années d'expérience</span></div>
+      <div class="stat reveal-up"><span class="stat-num" data-count="30">0</span><span class="stat-suffix">+</span><span class="stat-label">Projets livrés</span></div>
+      <div class="stat reveal-up"><span class="stat-num" data-count="15">0</span><span class="stat-suffix">+</span><span class="stat-label">Technologies maîtrisées</span></div>
+      <div class="stat reveal-up"><span class="stat-num" data-count="100">0</span><span class="stat-suffix">%</span><span class="stat-label">Engagement qualité</span></div>
+    </div>
+  </section>
+
+  <section class="ai" id="ai">
+    <div class="ai-glow"></div>
+    <div class="section-head">
+      <span class="section-tag reveal-up">02 — Intelligence artificielle</span>
+      <h2 class="section-title" data-words>Intégrer l'IA là où elle crée de la valeur, pas là où elle fait joli.</h2>
+      <p class="section-lead reveal-up">
+        Ma spécialité : connecter des modèles de langage à vos données et à vos outils métier —
+        avec des garde-fous, des coûts maîtrisés et des résultats mesurables.
+      </p>
+    </div>
+
+    <div class="ai-showcase">
+      <div class="chat reveal-up" id="aiChat">
+        <div class="chat-head">
+          <span class="chat-avatar">IA</span>
+          <div class="chat-id">
+            <strong>Assistant métier</strong>
+            <em>connecté à vos données internes</em>
+          </div>
+          <span class="chat-status"><i></i>en ligne</span>
+        </div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-input"><span>Poser une question…</span><i></i></div>
+      </div>
+
+      <div class="ai-points">
+        <div class="ai-point reveal-up">
+          <span class="ai-point-num">01</span>
+          <h3>Des réponses ancrées dans vos données</h3>
+          <p>Le modèle ne devine pas : il interroge vos bases, vos documents et vos API, puis cite ses sources.</p>
+        </div>
+        <div class="ai-point reveal-up">
+          <span class="ai-point-num">02</span>
+          <h3>Des actions, pas seulement du texte</h3>
+          <p>Function calling et outils métier : créer un ticket, relancer un client, générer un rapport, déclencher un workflow.</p>
+        </div>
+        <div class="ai-point reveal-up">
+          <span class="ai-point-num">03</span>
+          <h3>Maîtrise des coûts et de la latence</h3>
+          <p>Choix du modèle selon la tâche, mise en cache, streaming et suivi de la consommation par fonctionnalité.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline">
+      <h3 class="pipeline-title reveal-up">Architecture d'un assistant connecté (RAG + outils)</h3>
+      <div class="pipeline-scroll">
+        <svg id="pipelineSvg" viewBox="0 0 1060 290" role="img" aria-label="Schéma d'architecture d'un assistant IA connecté">
+          <defs>
+            <linearGradient id="pipeGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1060" y2="0">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#06b6d4"/>
+            </linearGradient>
+            <marker id="pipeArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto">
+              <path d="M0 0 L10 5 L0 10 z" fill="#06b6d4"/>
+            </marker>
+          </defs>
+
+          <g class="pipe-links" fill="none" stroke="url(#pipeGrad)" stroke-width="2" marker-end="url(#pipeArrow)">
+            <path d="M200 62 H262" />
+            <path d="M450 62 H512" />
+            <path d="M700 62 H762" />
+            <path d="M610 174 V98" />
+            <path d="M865 96 V174" />
+          </g>
+
+          <g class="pipe-nodes">
+            <g class="pipe-node">
+              <rect x="30" y="30" width="170" height="64" rx="16"/>
+              <text x="115" y="55">Question</text>
+              <text x="115" y="77" class="pipe-sub">utilisateur</text>
+            </g>
+            <g class="pipe-node">
+              <rect x="270" y="30" width="180" height="64" rx="16"/>
+              <text x="360" y="55">Embedding</text>
+              <text x="360" y="77" class="pipe-sub">vectorisation</text>
+            </g>
+            <g class="pipe-node">
+              <rect x="520" y="30" width="180" height="64" rx="16"/>
+              <text x="610" y="55">Recherche</text>
+              <text x="610" y="77" class="pipe-sub">pgvector / Qdrant</text>
+            </g>
+            <g class="pipe-node pipe-node-accent">
+              <rect x="770" y="30" width="190" height="64" rx="16"/>
+              <text x="865" y="55">Modèle LLM</text>
+              <text x="865" y="77" class="pipe-sub">+ outils métier</text>
+            </g>
+            <g class="pipe-node pipe-node-soft">
+              <rect x="490" y="180" width="240" height="58" rx="15"/>
+              <text x="610" y="209">Vos documents &amp; bases</text>
+            </g>
+            <g class="pipe-node pipe-node-soft">
+              <rect x="745" y="180" width="240" height="58" rx="15"/>
+              <text x="865" y="209">Réponse sourcée</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="ai-cards">
+      <article class="ai-card card-3d tilt">
+        <div class="ai-card-inner tilt-inner">
+          <span class="ai-card-icon">◈</span>
+          <h3>Intégration de LLM</h3>
+          <p>Branchement d'API (Claude, GPT, modèles open-source), réponses en streaming, sorties structurées et function calling.</p>
+        </div>
+      </article>
+      <article class="ai-card card-3d tilt">
+        <div class="ai-card-inner tilt-inner">
+          <span class="ai-card-icon">◉</span>
+          <h3>RAG &amp; recherche sémantique</h3>
+          <p>Découpage et vectorisation des contenus, bases vectorielles, reranking et citations vérifiables.</p>
+        </div>
+      </article>
+      <article class="ai-card card-3d tilt">
+        <div class="ai-card-inner tilt-inner">
+          <span class="ai-card-icon">◆</span>
+          <h3>Agents &amp; orchestration</h3>
+          <p>Workflows multi-étapes, appels d'outils, connexion aux systèmes existants (CRM, ERP, tickets) et protocole MCP.</p>
+        </div>
+      </article>
+      <article class="ai-card card-3d tilt">
+        <div class="ai-card-inner tilt-inner">
+          <span class="ai-card-icon">▤</span>
+          <h3>Traitement de documents</h3>
+          <p>Extraction structurée de PDF et factures, classification, résumés et contrôle de conformité automatisés.</p>
+        </div>
+      </article>
+      <article class="ai-card card-3d tilt">
+        <div class="ai-card-inner tilt-inner">
+          <span class="ai-card-icon">◎</span>
+          <h3>Évaluation &amp; fiabilité</h3>
+          <p>Jeux de tests, métriques de qualité, détection d'hallucinations et garde-fous avant mise en production.</p>
+        </div>
+      </article>
+      <article class="ai-card card-3d tilt">
+        <div class="ai-card-inner tilt-inner">
+          <span class="ai-card-icon">⬡</span>
+          <h3>Mise en production</h3>
+          <p>Cache, quotas, observabilité des prompts, coûts par requête et confidentialité des données.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="ai-stack reveal-up">
+      <span class="ai-stack-label">Stack IA</span>
+      <ul>
+        <li>API Claude</li><li>OpenAI</li><li>LangChain</li><li>LlamaIndex</li>
+        <li>pgvector</li><li>Qdrant</li><li>Ollama</li><li>Hugging Face</li>
+        <li>Vercel AI SDK</li><li>FastAPI</li><li>Python</li><li>TypeScript</li>
+      </ul>
+    </div>
+
+    <div class="ai-steps">
+      <div class="ai-step reveal-up">
+        <span>Étape 01</span>
+        <h4>Cadrage du cas d'usage</h4>
+        <p>Identifier où l'IA fait gagner du temps réel, et où elle n'a pas sa place.</p>
+      </div>
+      <div class="ai-step reveal-up">
+        <span>Étape 02</span>
+        <h4>Prototype mesurable</h4>
+        <p>Une maquette fonctionnelle évaluée sur vos vraies données, avec métriques de qualité.</p>
+      </div>
+      <div class="ai-step reveal-up">
+        <span>Étape 03</span>
+        <h4>Intégration produit</h4>
+        <p>Mise en place dans votre application et vos outils, avec l'expérience utilisateur qui va avec.</p>
+      </div>
+      <div class="ai-step reveal-up">
+        <span>Étape 04</span>
+        <h4>Industrialisation</h4>
+        <p>Suivi des coûts, monitoring, amélioration continue des prompts et des données.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="section-head">
+      <span class="section-tag reveal-up">03 — Compétences</span>
+      <h2 class="section-title" data-words>Une pile technique complète, du serveur au pixel.</h2>
+    </div>
+
+    <div class="skills-grid">
+      <article class="skill-card card-3d tilt">
+        <div class="skill-card-inner tilt-inner">
+          <div class="skill-icon"><i class="devicon-react-original colored"></i></div>
+          <h3>Frontend</h3>
+          <p>Interfaces réactives, animées et accessibles.</p>
+          <ul class="skill-tags"><li>React</li><li>Vue</li><li>TypeScript</li><li>Three.js</li><li>Tailwind</li></ul>
+        </div>
+      </article>
+
+      <article class="skill-card card-3d tilt">
+        <div class="skill-card-inner tilt-inner">
+          <div class="skill-icon"><i class="devicon-nodejs-plain colored"></i></div>
+          <h3>Backend</h3>
+          <p>APIs robustes, sécurisées et scalables.</p>
+          <ul class="skill-tags"><li>Node.js</li><li>Express</li><li>Python</li><li>NestJS</li><li>GraphQL</li></ul>
+        </div>
+      </article>
+
+      <article class="skill-card card-3d tilt">
+        <div class="skill-card-inner tilt-inner">
+          <div class="skill-icon"><i class="devicon-postgresql-plain colored"></i></div>
+          <h3>Données</h3>
+          <p>Modélisation et optimisation des données.</p>
+          <ul class="skill-tags"><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>Prisma</li></ul>
+        </div>
+      </article>
+
+      <article class="skill-card card-3d tilt">
+        <div class="skill-card-inner tilt-inner">
+          <div class="skill-icon"><i class="devicon-docker-plain colored"></i></div>
+          <h3>DevOps &amp; Outils</h3>
+          <p>Déploiement, intégration continue, monitoring.</p>
+          <ul class="skill-tags"><li>Docker</li><li>Git</li><li>CI/CD</li><li>AWS</li><li>Linux</li></ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="section-head">
+      <span class="section-tag reveal-up">04 — Projets</span>
+      <h2 class="section-title" data-words>Une sélection de réalisations récentes.</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card card-3d tilt" style="--grad-a:#7c3aed; --grad-b:#06b6d4;">
+        <div class="project-card-inner tilt-inner">
+          <div class="project-thumb">
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><em>nova-analytics.app</em></div>
+              <div class="browser-body">
+                <div class="mock-side"></div>
+                <div class="mock-main">
+                  <div class="mock-row"><span style="width:38%"></span><span style="width:22%"></span></div>
+                  <div class="mock-chart"><i style="height:38%"></i><i style="height:66%"></i><i style="height:48%"></i><i style="height:82%"></i><i style="height:58%"></i><i style="height:94%"></i></div>
+                  <div class="mock-row"><span style="width:60%"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Plateforme SaaS</span>
+            <h3>Nova Analytics</h3>
+            <p>Tableau de bord temps réel pour le suivi de KPIs métier, avec visualisations interactives et API modulaire.</p>
+            <ul class="project-tags"><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>WebSocket</li></ul>
+            <div class="project-links"><a href="#" class="link-arrow">Voir le projet →</a><a href="#" class="link-arrow">Code source</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card-3d tilt" style="--grad-a:#06b6d4; --grad-b:#ec4899;">
+        <div class="project-card-inner tilt-inner">
+          <div class="project-thumb">
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><em>atelier-store.fr</em></div>
+              <div class="browser-body">
+                <div class="mock-grid"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">E-commerce</span>
+            <h3>Atelier Store</h3>
+            <p>Boutique en ligne headless avec paiement intégré, gestion de stock et back-office sur-mesure.</p>
+            <ul class="project-tags"><li>Next.js</li><li>Stripe</li><li>MongoDB</li><li>Docker</li></ul>
+            <div class="project-links"><a href="#" class="link-arrow">Voir le projet →</a><a href="#" class="link-arrow">Code source</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card-3d tilt" style="--grad-a:#ec4899; --grad-b:#7c3aed;">
+        <div class="project-card-inner tilt-inner">
+          <div class="project-thumb">
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><em>flowbase.io</em></div>
+              <div class="browser-body">
+                <div class="mock-flow"><span></span><b></b><span></span><b></b><span></span></div>
+                <div class="mock-row"><span style="width:70%"></span></div>
+                <div class="mock-row"><span style="width:45%"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Outil interne</span>
+            <h3>Flowbase</h3>
+            <p>Automatisation de workflows d'équipe avec moteur de règles visuel et intégrations tierces.</p>
+            <ul class="project-tags"><li>Vue</li><li>NestJS</li><li>Redis</li><li>GraphQL</li></ul>
+            <div class="project-links"><a href="#" class="link-arrow">Voir le projet →</a><a href="#" class="link-arrow">Code source</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card-3d tilt" style="--grad-a:#22d3ee; --grad-b:#a78bfa;">
+        <div class="project-card-inner tilt-inner">
+          <div class="project-thumb">
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><em>julienplomion.dev</em></div>
+              <div class="browser-body">
+                <div class="mock-hero"><span style="width:55%"></span><span style="width:35%"></span><em></em></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-cat">Expérience 3D</span>
+            <h3>Portfolio interactif</h3>
+            <p>Ce site : vitrine immersive avec modèles 3D temps réel, matériaux PBR et animations pilotées au scroll.</p>
+            <ul class="project-tags"><li>Three.js</li><li>GSAP</li><li>WebGL</li><li>Lenis</li></ul>
+            <div class="project-links"><a href="#" class="link-arrow">Voir le projet →</a><a href="#" class="link-arrow">Code source</a></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <div class="section-head">
+      <span class="section-tag reveal-up">05 — Parcours</span>
+      <h2 class="section-title" data-words>Une progression continue, projet après projet.</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"><span class="timeline-line-fill" id="timelineFill"></span></div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024 — Aujourd'hui</span>
+          <h3>Développeur Full Stack Senior</h3>
+          <p>Conception et développement d'applications web à grande échelle, encadrement technique et choix d'architecture.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2022 — 2024</span>
+          <h3>Développeur Full Stack</h3>
+          <p>Développement de produits SaaS de bout en bout, du modèle de données à l'interface utilisateur.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2020 — 2022</span>
+          <h3>Développeur Frontend</h3>
+          <p>Spécialisation en interfaces interactives, animations et optimisation des performances web.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Formation</span>
+          <h3>Diplôme en développement logiciel</h3>
+          <p>Fondations solides en algorithmique, structures de données et architecture logicielle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-glow"></div>
+    <div class="section-head center">
+      <span class="section-tag reveal-up">06 — Contact</span>
+      <h2 class="section-title" data-words>Un projet en tête ? Parlons-en.</h2>
+      <p class="contact-sub reveal-up">Collaboration, mission freelance ou simple échange technique — je réponds rapidement.</p>
+    </div>
+
+    <div class="contact-grid">
+      <form class="contact-form reveal-up" id="contactForm">
+        <div class="form-row">
+          <label><span>Nom</span><input type="text" name="name" required placeholder="Votre nom"></label>
+          <label><span>Email</span><input type="email" name="email" required placeholder="vous@exemple.com"></label>
+        </div>
+        <label><span>Message</span><textarea name="message" rows="5" required placeholder="Parlez-moi de votre projet..."></textarea></label>
+        <button type="submit" class="btn btn-primary"><span>Envoyer le message</span></button>
+        <p class="form-note">Ce formulaire ouvre votre client mail — connectez-le à Formspree ou EmailJS pour un envoi direct.</p>
+      </form>
+
+      <div class="contact-side reveal-up">
+        <a href="mailto:julien.plomion2006@gmail.com" class="contact-link">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">julien.plomion2006@gmail.com</span>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-value">github.com/julienplomion</span>
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">linkedin.com/in/julienplomion</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Julien Plomion — Développeur Full Stack</span>
+    <a href="#home" class="footer-top">Haut de page ↑</a>
+  </footer>
+
+</main>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
